@@ -1,15 +1,15 @@
 package rental.movie;
 
 public class Rental {
-	private Movie _movie;
+	private entities.Movie _movie;
 	private int _daysRented;
 
-	public Rental(Movie movie, int daysRented) {
+	public Rental(entities.Movie movie, int daysRented) {
 		_movie = movie;
 		_daysRented = daysRented;
 	}
 
-	public Movie getMovie() {
+	public entities.Movie getMovie() {
 		return _movie;
 	}
 
