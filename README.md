@@ -1,3 +1,5 @@
+Check [this link](https://github.com/Theo3285sOrga/rentalMovie/wiki) for lesson learnt
+
 Kata 01 : Refactor Rental Movie code provided in Refactoring book by Martin Fowler
 
 Steps :
