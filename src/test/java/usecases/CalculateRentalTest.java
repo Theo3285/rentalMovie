@@ -4,7 +4,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-import entities.Customer;
 import entities.Movie;
 import entities.Price;
 import entities.Rental;
@@ -14,13 +13,12 @@ import entities.Rental;
  */
 public class CalculateRentalTest {
 
-
     @Test
     public void totalRenterPointsIsOne_IfMovieIsNewRelease_And_DaysRentedIsOne() {
         Movie aMovie = new Movie("MOVIE_ONE", Price.NEW_RELEASE);
         Rental aRental = new Rental(aMovie, 1);
 
-        CalculateRental cr = new CalculateRental(aRental);
+        RentalCalculator cr = new CalculateRental(aRental);
 
         int frequentRenterPoints = cr.getTotalFrequentRenterPoints();
 
@@ -32,7 +30,7 @@ public class CalculateRentalTest {
         Movie aMovie = new Movie("MOVIE_TWO", Price.REGULAR);
         Rental aRental = new Rental(aMovie, 3);
 
-        CalculateRental cr = new CalculateRental(aRental);
+        RentalCalculator cr = new CalculateRental(aRental);
 
         double totalCharge = cr.getTotalCharge();
 

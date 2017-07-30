@@ -1,6 +1,5 @@
 package usecases;
 
-import entities.Customer;
 import entities.Rental;
 
 import java.util.Enumeration;
@@ -9,7 +8,7 @@ import java.util.Vector;
 /**
  * Created by christophe on 30/07/2017.
  */
-public class CalculateRental {
+public class CalculateRental implements RentalCalculator {
 
     private Vector _rentals = new Vector();
 

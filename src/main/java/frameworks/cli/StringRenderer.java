@@ -5,6 +5,7 @@ import entities.Movie;
 import entities.Price;
 import entities.Rental;
 import usecases.CalculateRental;
+import usecases.RentalCalculator;
 
 /**
  * Created by christophe on 30/07/2017.
@@ -12,7 +13,7 @@ import usecases.CalculateRental;
 public class StringRenderer {
 
     private Customer _customer;
-    private CalculateRental _calculateRental;
+    private RentalCalculator _calculateRental;
 
     public StringRenderer(String aCustomerName, String aMovieTitle, int daysRented) {
         _customer = new Customer(aCustomerName);

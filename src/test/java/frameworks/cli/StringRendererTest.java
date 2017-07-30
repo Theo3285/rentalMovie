@@ -1,14 +1,13 @@
 package frameworks.cli;
 
-import entities.Customer;
 import entities.Movie;
 import entities.Price;
 import entities.Rental;
 import org.junit.Test;
 import usecases.CalculateRental;
+import usecases.RentalCalculator;
 
 import static org.hamcrest.CoreMatchers.containsString;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 /**
@@ -37,7 +36,7 @@ public class StringRendererTest {
         Rental rental1 = new Rental(aMovie, 6);
         Movie movie2 = new Movie("MOVIE_FOUR", Price.NEW_RELEASE);
         Rental rental2 = new Rental(movie2, 6);
-        CalculateRental cr = new CalculateRental();
+        RentalCalculator cr = new CalculateRental();
         cr.addRental(rental1);
         cr.addRental(rental2);
 
