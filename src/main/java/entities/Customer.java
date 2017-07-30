@@ -1,8 +1,5 @@
 package entities;
 
-import java.util.Enumeration;
-import java.util.Vector;
-
 /**
  * Create a Customer test suite before refactoring
  * Extract amount calculation (switch case) into a private method
