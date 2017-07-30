@@ -32,61 +32,13 @@ import java.util.Vector;
 
 public class Customer {
     private String _name;
-    private Vector _rentals = new Vector();
 
     public Customer(String name) {
         _name = name;
     }
 
-    public void addRental(Rental arg) {
-        _rentals.addElement(arg);
-    }
-
     public String getName() {
         return _name;
     }
-
-    public String renderStringStatement() {
-
-        Enumeration rentals = _rentals.elements();
-        String statement = "Rental Record for " + getName() + "\n";
-
-        while (rentals.hasMoreElements()) {
-            Rental aRental = (Rental) rentals.nextElement();
-            statement += aRental.toString();
-        }
-
-        statement += toString();
-
-        return statement;
-    }
-
-    private double getTotalCharge() {
-        double totalAmount = 0;
-        Enumeration rentals = _rentals.elements();
-        while (rentals.hasMoreElements()) {
-            Rental aRental = (Rental) rentals.nextElement();
-            totalAmount += aRental.getCharge();
-        }
-        return totalAmount;
-    }
-
-    public int getTotalFrequentRenterPoints() {
-        int frequentRenterPoints = 0;
-        Enumeration rentals = _rentals.elements();
-        while (rentals.hasMoreElements()) {
-            Rental aRental = (Rental) rentals.nextElement();
-            frequentRenterPoints += aRental.getFrequentRenterPoints();
-        }
-        return frequentRenterPoints;
-    }
-
-    public String toString() {
-        // add footer lines
-        return "Amount owed is " + String.valueOf(getTotalCharge()) + "\n"
-                + "You earned " + String.valueOf(getTotalFrequentRenterPoints())
-                + " frequent renter points";
-    }
-
 
 }

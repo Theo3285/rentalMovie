@@ -17,6 +17,10 @@ public class CalculateRental {
         addRental(arg);
     }
 
+    public CalculateRental() {
+    }
+
+
     public void addRental(Rental arg) {
         _rentals.addElement(arg);
     }
@@ -39,5 +43,16 @@ public class CalculateRental {
             frequentRenterPoints += aRental.getFrequentRenterPoints();
         }
         return frequentRenterPoints;
+    }
+
+    public String getMovieList() {
+        Enumeration rentals = _rentals.elements();
+        String statement = "";
+
+        while (rentals.hasMoreElements()) {
+            Rental aRental = (Rental) rentals.nextElement();
+            statement += aRental.toString();
+        }
+        return statement;
     }
 }

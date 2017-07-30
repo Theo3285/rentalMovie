@@ -16,18 +16,6 @@ public class CalculateRentalTest {
 
 
     @Test
-    public void totalRenterPointsIsTwo_IfMovieIsNewRelease_And_DaysRentedGreaterThanOne() {
-        Customer customer = new Customer("CUST_ONE");
-        Movie aMovie = new Movie("MOVIE_ONE", Price.NEW_RELEASE);
-        Rental aRental = new Rental(aMovie, 6);
-        customer.addRental(aRental);
-
-        int frequentRenterPoints = customer.getTotalFrequentRenterPoints();
-
-        assertEquals(2, frequentRenterPoints);
-    }
-
-    @Test
     public void totalRenterPointsIsOne_IfMovieIsNewRelease_And_DaysRentedIsOne() {
         Movie aMovie = new Movie("MOVIE_ONE", Price.NEW_RELEASE);
         Rental aRental = new Rental(aMovie, 1);
