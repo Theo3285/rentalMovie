@@ -1,5 +1,6 @@
 package usecases;
 
+import adapters.RentalCalculator;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

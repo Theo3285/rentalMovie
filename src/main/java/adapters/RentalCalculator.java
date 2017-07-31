@@ -1,4 +1,4 @@
-package usecases;
+package adapters;
 
 import entities.Rental;
 
