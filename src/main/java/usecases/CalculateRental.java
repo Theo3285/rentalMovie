@@ -1,6 +1,5 @@
 package usecases;
 
-import adapters.RentalCalculator;
 import entities.Rental;
 
 import java.util.Enumeration;

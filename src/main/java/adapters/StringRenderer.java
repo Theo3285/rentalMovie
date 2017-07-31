@@ -1,11 +1,10 @@
-package frameworks.cli;
+package adapters;
 
-import adapters.CalculatorFactory;
 import entities.Customer;
 import entities.Movie;
 import entities.Price;
 import entities.Rental;
-import adapters.RentalCalculator;
+import usecases.RentalCalculator;
 
 /**
  * Created by christophe on 30/07/2017.

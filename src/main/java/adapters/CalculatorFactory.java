@@ -1,6 +1,7 @@
 package adapters;
 
 import usecases.CalculateRental;
+import usecases.RentalCalculator;
 
 /**
  * Created by christophe on 31/07/2017.

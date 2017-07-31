@@ -1,10 +1,9 @@
-package frameworks.cli;
+package adapters;
 
-import adapters.CalculatorFactory;
 import entities.Movie;
 import entities.Price;
 import entities.Rental;
-import adapters.RentalCalculator;
+import usecases.RentalCalculator;
 
 import org.junit.Test;
 import static org.hamcrest.CoreMatchers.containsString;
