@@ -4,10 +4,9 @@ import adapters.CalculatorFactory;
 import entities.Movie;
 import entities.Price;
 import entities.Rental;
-import org.junit.Test;
-import usecases.CalculateRental;
 import adapters.RentalCalculator;
 
+import org.junit.Test;
 import static org.hamcrest.CoreMatchers.containsString;
 import static org.junit.Assert.assertThat;
 
