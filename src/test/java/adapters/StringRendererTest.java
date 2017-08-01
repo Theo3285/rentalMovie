@@ -31,12 +31,21 @@ public class StringRendererTest {
 
     @Test
     public void shouldReturnAListOfMoviesWithIndividualChargesAsString(){
-        Movie aMovie = new Movie("MOVIE_THREE", Price.CHILDREN);
-        Rental rental1 = new Rental(aMovie, 6);
-        Movie movie2 = new Movie("MOVIE_FOUR", Price.NEW_RELEASE);
-        Rental rental2 = new Rental(movie2, 6);
+        Rental rental1 = new Rental
+                .RentalBuilder("MOVIE_THREE", Price.CHILDREN)
+                .customer("Cust1")
+                .daysRented(6)
+                .build();
+
+        Rental rental2 = new Rental
+                .RentalBuilder("MOVIE_FOUR", Price.NEW_RELEASE)
+                .customer("Cust1")
+                .daysRented(6)
+                .build();
+
         CalculatorFactory factory = new CalculatorFactory(CalculatorFactory.CALCULATE_RENTAL);
         RentalCalculator cr = factory.getInstance();
+
         cr.addRental(rental1);
         cr.addRental(rental2);
 

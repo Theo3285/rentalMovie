@@ -15,8 +15,11 @@ public class CalculateRentalTest {
 
     @Test
     public void totalRenterPointsIsOne_IfMovieIsNewRelease_And_DaysRentedIsOne() {
-        Movie aMovie = new Movie("MOVIE_ONE", Price.NEW_RELEASE);
-        Rental aRental = new Rental(aMovie, 1);
+        Rental aRental = new Rental
+                .RentalBuilder("MOVIE_ONE", Price.NEW_RELEASE)
+                .customer("Cust1")
+                .daysRented(1)
+                .build();
 
         RentalCalculator cr = new CalculateRental(aRental);
 
@@ -27,8 +30,11 @@ public class CalculateRentalTest {
 
     @Test
     public void totalChargeIsThreeDotFive_IfMovieIsRegular_And_DaysRentedIsThree() {
-        Movie aMovie = new Movie("MOVIE_TWO", Price.REGULAR);
-        Rental aRental = new Rental(aMovie, 3);
+        Rental aRental = new Rental
+                .RentalBuilder("MOVIE_TWO", Price.REGULAR)
+                .customer("Cust1")
+                .daysRented(3)
+                .build();
 
         RentalCalculator cr = new CalculateRental(aRental);
 

@@ -14,4 +14,6 @@ public interface RentalCalculator {
     int getTotalFrequentRenterPoints();
 
     String getMovieList();
+
+    String getCustomerNames();
 }

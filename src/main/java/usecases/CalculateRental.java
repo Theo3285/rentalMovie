@@ -54,4 +54,15 @@ public class CalculateRental implements RentalCalculator {
         }
         return statement;
     }
+
+    public String getCustomerNames() {
+        Enumeration rentals = _rentals.elements();
+        String customerNames = "";
+
+        while (rentals.hasMoreElements()) {
+            Rental aRental = (Rental) rentals.nextElement();
+            customerNames += aRental.getName();
+        }
+        return customerNames;
+    }
 }
